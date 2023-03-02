@@ -292,6 +292,7 @@ namespace OpenTelemetry.Exporter.OpenTelemetryProtocol.Tests
         }
 
         [Theory]
+        [InlineData("test counter", null, null, 123L, null, MetricReaderTemporalityPreference.Cumulative)]
         [InlineData("test_counter", null, null, 123L, null, MetricReaderTemporalityPreference.Cumulative)]
         [InlineData("test_counter", null, null, null, 123.45, MetricReaderTemporalityPreference.Cumulative)]
         [InlineData("test_counter", null, null, 123L, null, MetricReaderTemporalityPreference.Delta)]
